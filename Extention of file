@@ -1,1 +1,9 @@
-
+print("Input the Filename:")
+f=(input())
+c=f.split(".")
+dict = {}
+dict['py'],dict['c'],dict['cpp'], dict['html']= 'Python','C','C++','Hypertext Markup language'
+print('The extension of the file is :')
+for i in dict:
+    if(i==c[1]):
+        print(dict[i])
