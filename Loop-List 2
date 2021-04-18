@@ -1,0 +1,4 @@
+list2 = [12, 14, -95, 3]
+for j in list2:
+        if j>=0:
+            print (j)
