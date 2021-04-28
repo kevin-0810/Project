@@ -1,0 +1,48 @@
+import csv
+student_no=1
+def write(info_list):
+    with open("./student_list.csv","a", newline="")as csv_file:
+        writer=csv.writer(csv_file)
+        if csv_file.tell()==0:
+             writer.writerow(["Name","Roll_No","Division","Class"])
+        
+        writer.writerow(info_list)
+        
+        
+        
+        
+condition=True
+while(condition):
+    student_info=input("Enter #{} Student Information:[Name Roll_No Division Class]".format(student_no))
+    
+    student_info_list=student_info.split(" ")
+    print("\nThe entered Information is- \n Name: {}\nRoll_No: {}\nDivision: {}\nClass: {}\n"
+          .format(student_info_list[0],student_info_list[1],student_info_list[2],student_info_list[3]))
+    
+    print("Entered Information is correct?")
+    
+   
+    confirmation=input()
+    if(confirmation=="Yes"):
+        write(student_info_list)
+        student_no+=1
+    
+    elif(confirmation=="yes"):
+        write(student_info_list)
+        student_no+=1               
+    
+    elif(confirmation=="No"):
+        print("\nPlease re-enter the correct Information")
+    
+    elif(confirmation=="No"):
+        print("\nPlease re-enter the correct Information")
+    
+    condition_check=input("Do you want to feed another entry?")
+    if(condition_check=="Yes"):
+        condition=True
+    elif(condition_check=="yes"):
+        condition=True
+    elif(condition_check=="No"):
+        condition=False
+    elif(condition_check=="no"):
+        condition=False
